@@ -1,10 +1,9 @@
 from sqlalchemy import Column, Integer, String, ForeignKey
-
 from declarative_base import Base
 
 
 
-class Asignatura(Base):
+class asignatura(Base):
     __tablename__ = 'Asignatura'
 
     id = Column(Integer, primary_key=True)
