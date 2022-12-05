@@ -10,5 +10,5 @@ class asignatura(Base):
     nombre = Column(String)
     nota = Column(Integer)
     credito = Column(Integer)
-    promedio = Column(Integer)
+    promedio = (nota*credito)/credito
     docente = Column(Integer, ForeignKey('Docente.id'))
