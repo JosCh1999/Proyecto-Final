@@ -2,8 +2,6 @@ from sqlalchemy import Column, Integer, String, ForeignKey
 
 from declarative_base import Base
 
-
-
 class Asignatura(Base):
     __tablename__ = 'Asignatura'
 
@@ -11,5 +9,5 @@ class Asignatura(Base):
     nombre = Column(String)
     nota = Column(Integer)
     credito = Column(Integer)
-    promedio = Column(Integer)
+    promedio = (nota*credito)/credito
     docente = Column(Integer, ForeignKey('Docente.id'))
